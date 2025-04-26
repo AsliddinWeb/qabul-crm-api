@@ -8,19 +8,13 @@ Ushbu loyiha **Django** asosida yaratilgan.
 
 Loyihani **GitHub**'dan yuklab olish:
 ```bash
-git clone https://github.com/<username>/<repository>.git
-cd <repository>
+git clone https://github.com/AsliddinWeb/qabul-crm-api.git
+cd qabul-crm-api
 ```
 
-**1. `.env` faylini yaratish va unga quyidagi ma'lumotni kiritish:**
+**1. `.env` faylini yaratish:**
 ```env
-SECRET_KEY=secret_key
-DEBUG=True
-
-ALLOWED_HOSTS=127.0.0.1,localhost
-
-DJANGO_ENV=dev
-
+...
 ```
 
 **2. Virtual muhitni yaratish va faollashtirish:**
