@@ -1,4 +1,5 @@
 from django.db import models
+from django.conf import settings
 
 class Region(models.Model):
     """Viloyat yoki shaharlar (masalan: Toshkent, Andijon, Qoraqalpog‘iston)"""
@@ -20,6 +21,7 @@ class District(models.Model):
 
 class PassportInfo(models.Model):
     """Pasport ma’lumotlari (viloyat va tuman tanlanadi)"""
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True)
     full_name = models.CharField(max_length=255)
     birth_date = models.DateField()
     passport_series = models.CharField(max_length=50)

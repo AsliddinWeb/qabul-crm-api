@@ -81,7 +81,7 @@ class GetPassportInfoFromGov(APIView):
                     )
                     returned_data["photo_url"] = photo_url
 
-                return Response(returned_data, status=200)
+                return Response(data, status=200)
                 
 
                 return Response(response.json(), status=200)

@@ -1,4 +1,5 @@
 from django.db import models
+from django.conf import settings
 
 class DiplomInfo(models.Model):
     DEGREE_LEVEL_CHOICES = [
@@ -7,7 +8,7 @@ class DiplomInfo(models.Model):
         ('university', 'Universitet'),
         ('other', 'Boshqa'),
     ]
-
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True)
     institution_name = models.CharField(max_length=255)
     diplom_number = models.CharField(max_length=50)
     graduation_year = models.PositiveIntegerField()
