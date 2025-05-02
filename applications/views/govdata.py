@@ -52,7 +52,7 @@ class GetPassportInfoFromGov(APIView):
         }
 
         try:
-            response = requests.get(url, params=params, timeout=10)
+            response = requests.get(url, params=params)
             if response.status_code == 200:
                 data = response.json()
                 returned_data = {}
@@ -81,7 +81,7 @@ class GetPassportInfoFromGov(APIView):
                     )
                     returned_data["photo_url"] = photo_url
 
-                return Response(data, status=200)
+                return Response(returned_data, status=200)
                 
 
                 return Response(response.json(), status=200)
